@@ -155,10 +155,13 @@ function isPostAttendee() {
 function isMeetingStatusSuccess() {
   if (window.location.href.toLowerCase().includes('success')) {
     return true;
-  }
-
+    }
+  if (window.location.href.toLowerCase().includes('desktop-info')) {
+    return true;
+    }
   return false;
 }
+
 
 function isPageTextLikeMeetingLaunch() {
   const pageText = document?.body?.innerText?.toLowerCase() || '';
